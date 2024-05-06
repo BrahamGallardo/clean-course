@@ -35,3 +35,12 @@ export class PhotosService {
   }
 
 }
+
+export class PokemonService {
+  constructor(private http: HttpClient) { }
+
+  async getPokemons() {
+    const { data } = await this.http.get('https://pokeapi.co/api/v2/pokemon');
+    return data;
+  }
+}

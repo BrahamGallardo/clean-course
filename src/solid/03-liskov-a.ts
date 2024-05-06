@@ -5,7 +5,7 @@ import { Tesla, Audi, Toyota, Honda, Vehicle } from './03-liskov-b';
     
     const printCarSeats = ( cars: Vehicle[] ) => {
         cars.forEach( car => {
-            console.log( car.constructor.name, car.getNumberOfSeats() );
+            !(car instanceof Audi) ? console.log( car.constructor.name, car.getNumberOfSeats() ) : "";
         });
         // for (const car of cars) {
          
